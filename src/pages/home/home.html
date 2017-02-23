@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Socialmente Jamais</ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
 <h2 class="white" text-center>Toque para adicionar +1</h2>
-  <img src="img/icon.png" class="botao" alt="" (tap)="maisUmaCerveja()">
+  
+  <img src="img/icon.png" class="botao" [ngClass]="{'animated shake': bounce}"  (tap)="maisUmaCerveja()">
+
   <h1 class="white" text-center>{{numeroCervejas}}</h1>
   <button block small color="amarelinho" ion-button (tap)="fecharConta(numeroCervejas)">Fechar conta</button>
   <button block small color="danger" ion-button (tap)="reseta()">Resetar</button>

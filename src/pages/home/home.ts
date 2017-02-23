@@ -10,6 +10,9 @@ import { ContaPage } from '../conta/conta';
 
 export class HomePage {
 
+
+
+  public bounce = false;
   public frases = [
     "Você pediu mais uma cerveja!",
     "Opa! Desce mais uma!",
@@ -26,7 +29,8 @@ export class HomePage {
     public modalCtrl: ModalController,
   	public navParams: NavParams
   	) {
-  	console.log(this.numeroCervejas);
+
+
   }
 
 
@@ -40,6 +44,8 @@ maisUmaCerveja(){
           position: "top"
         });
         toast.present();
+
+        this.bounce = true;
 
 }
 
@@ -71,6 +77,8 @@ reseta(){
 
   
 }
+
+
 
 
 }
