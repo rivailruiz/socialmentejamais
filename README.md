@@ -7,7 +7,7 @@ Aplicativo para dividir conta entre amigos no bar.
 
 * Histórico de contas (mostrar as divisões antigas de alguma forma)
 
-* Aumentar o numero de ifs, nao dividir se nao tem bebida adiciona por exemplo.
+* Aumentar o numero de ifs, nao dividir se nao tem bebida adicionado, por exemplo.
 
 * Adicionar audio quando apertar o botão
 
