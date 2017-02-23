@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ajustes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+  <ion-card-header>
+    Ajustes
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item (tap)="abrirPreco()">
+      <ion-icon name="ios-beer-outline" item-left></ion-icon>
+      Valor da cerveja
+    </button>
+
+    <button ion-item (tap)="abrirPessoas()">
+      <ion-icon name="ios-people" item-left></ion-icon>
+      Quantidade de pessoas
+    </button>
+
+    <button ion-item>
+      <ion-icon name="ios-star" item-left></ion-icon>
+      Avaliar
+    </button>
+
+    <button ion-item (tap)="abrirApoio()">
+      <ion-icon name="logo-usd" item-left></ion-icon>
+      Apoio
+    </button>
+
+    <button ion-item>
+      <ion-icon name="ios-information-outline" item-left></ion-icon>
+      Sobre o App
+    </button>
+
+  </ion-list>
+</ion-card>
+</ion-content>

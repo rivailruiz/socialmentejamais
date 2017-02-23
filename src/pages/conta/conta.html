@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Conta
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    Resumo de sua conta
+  </ion-card-header>
+  <ion-card-content>
+    Você pediu {{numeroCervejas}} cervejas. Dividindo para {{qtdPessoas}} pessoas fica R$ {{total}} para cada um. <br>
+    Obrigado por utilizar o App.
+  </ion-card-content>
+</ion-card>
+<button ion-button block color="amarelinho" (tap)="fechar()">Voltar</button>
+
+</ion-content>
