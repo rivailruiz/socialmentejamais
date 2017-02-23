@@ -6,16 +6,19 @@ import { NavController, ModalController, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',
-  templateUrl: 'about.html'
+  templateUrl: 'about.html',
+  providers:[PricePage]
 })
 export class AboutPage {
 
+public valorCerveja;
   constructor(
   	public navCtrl: NavController,
   	public modalCtrl: ModalController,
-  	public viewCtrl: ViewController
+  	public viewCtrl: ViewController,
+    public pagePreco: PricePage
   	) {
-
+      console.log(this.pagePreco.getValorcerveja());
   }
 
 

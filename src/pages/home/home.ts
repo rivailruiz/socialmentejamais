@@ -12,14 +12,9 @@ export class HomePage {
 
 
 
-  public bounce = false;
-  public frases = [
-    "Você pediu mais uma cerveja!",
-    "Opa! Desce mais uma!",
-    "Desce gelo!",
-    "Mais uma pra conta!",
-    "Se beber não dirija."
-  ];
+  public bounce: boolean = false;
+  public frases = [];
+  public frase: any;
 
 	public numeroCervejas: number = 0;
   constructor(
@@ -29,24 +24,38 @@ export class HomePage {
     public modalCtrl: ModalController,
   	public navParams: NavParams
   	) {
-
-
+    
   }
 
 
+retornaFrase(){
+    this.frases = [
+    "Você pediu mais uma cerveja!",
+    "Opa! Desce mais uma!",
+    "Desce gelo!",
+    "Mais uma pra conta!",
+    "Se beber não dirija.",
+    "Vai devagar, meu chapa!",
+    "Ta bebendo mais que Opala, hein!",
+    "Fora Temer!"
+  ];
+     var i = Math.floor(8*Math.random());
+     this.frase = (this.frases[i]);
+     console.log(this.frase);
+}
 
-maisUmaCerveja(){
+maisUmaCerveja(frase){
 	this.numeroCervejas = this.numeroCervejas +1;
-	
+  this.retornaFrase();
+
 	 let toast = this.toastCtrl.create({
-          message: 'Desce gelo!',
+          message: this.frase,
           duration: 1500,
           position: "top"
         });
         toast.present();
-
         this.bounce = true;
-
+        setTimeout(function(bounce){ this.bounce=false; }, 1000);
 }
 
 fecharConta(numeroCervejas){
@@ -69,6 +78,7 @@ reseta(){
         text: 'Resetar',
         handler: () => {
           this.numeroCervejas = 0;
+          this.bounce = false;
         }
       }
     ]

@@ -13,18 +13,26 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 })
 export class PricePage {
 
+  public valorCerveja: any;
   constructor(
   	public navCtrl: NavController,
   	public navParams: NavParams,
   	public viewCtrl: ViewController
-  	) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PricePage');
+  	) {
   }
 
 fechar(){
 	this.viewCtrl.dismiss();
+}
+
+salvar(){
+  this.valorCerveja = this.valorCerveja;
+  return this.valorCerveja;
+
+}
+
+getValorcerveja(){
+  this.salvar();
 }
 
 }

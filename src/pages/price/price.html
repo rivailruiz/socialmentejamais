@@ -21,9 +21,9 @@
 
 	<ion-item>
 		<ion-label stacked>Preço da cerveja</ion-label>
-    <ion-input type="number" placeholder="Unidade"></ion-input>
+    <ion-input type="number" [(ngModel)]="valorCerveja" placeholder="Unidade"></ion-input>
   </ion-item>
-<button ion-button block color="amarelinho" (tap)="fechar()">Salvar</button>
+<button ion-button block color="amarelinho" (tap)="salvar()">Salvar</button>
 <button ion-button block color="cinza" (tap)="fechar()">Voltar</button>
 
 </ion-content>
